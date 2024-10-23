@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>buscador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-input type="text" placeholder="pokemon" (keyup.enter)="getPokemon($event)"></ion-input>
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+    <ion-card-title>Pokemon</ion-card-title>
+  </ion-card-header>
+        <img src="{{pokemon?.sprites.otther['official-artwork'].front_default}}" alt="">
+        <h1>{{ pokemon?.name }}</h1>
+        <h1>{{ pokemon?.id }}</h1>
+</ion-card>
+</ion-content>
